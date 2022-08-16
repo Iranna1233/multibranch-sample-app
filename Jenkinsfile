@@ -10,7 +10,7 @@ pipeline {
                 echo "hello"
             }
         }
-         stage('Cat README') {
+         stage('cat README') {
              when {
                  branch "fix-*"
              }
@@ -18,6 +18,7 @@ pipeline {
                 sh '''
                     cat README.md
                 '''
+            }
         }
     }
 }
