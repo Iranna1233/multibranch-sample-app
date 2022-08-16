@@ -10,5 +10,9 @@ pipeline {
                 echo "hello"
             }
         }
+         stage('Cat README') {
+            steps {
+                echo "hello"
+            }
     }
 }
