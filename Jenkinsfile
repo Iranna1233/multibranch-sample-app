@@ -1,14 +1,28 @@
 pipeline {
+   
     agent any
-    options {
-        buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-        disableConcurrentBuilds()
-    }
+     
     stages {
-        stage('Hello') {
-            steps {
-                echo "hello"
+   
+        stage("build") {
+            
+            steps {    
+                echo 'building the application....'
             }
         }
-    }
+   
+        stage("test") {
+            
+            steps {
+                echo 'testing the application....'
+            }
+        }
+
+        stage("deploy") {
+
+            steps {
+                echo 'deploying the application....'
+            }
+        }
+    }    
 }
